@@ -38,6 +38,10 @@ const props = defineProps({
     completed : {
         tpye: Boolean,
         default: false,
+    },
+    req : {
+        tpye: Array,
+        default: [],
     }
 })
 
@@ -45,9 +49,20 @@ const props = defineProps({
 
 <style scoped>
 
+/* .info-container > span {
+    flex: 1;
+} */
+
+.small-item {
+    max-width: fit-content;
+}
+
 .info-container {
+    width: 100%;
     display: flex;
-    gap: 12px;
+    gap: 24px;
+    align-items: stretch;
+    justify-content: stretch;
 }
 .container {
     display: flex;

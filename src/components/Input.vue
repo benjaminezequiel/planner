@@ -21,7 +21,7 @@ const props = defineProps({
         default: 'label',
     },
     modelValue: {
-        type: [Boolean, String],
+        type: [Boolean, String, Number],
         default: '',
     }
 })
