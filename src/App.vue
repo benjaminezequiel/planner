@@ -35,6 +35,20 @@ function addData() {
     completed: completed.value,
     id: id++,
   })
+  resetValues()
+}
+
+function resetValues() {
+  className.value = '';
+  semester.value = 1;
+  startTime.value = '';
+  endTime.value = '';
+  completed.value = false;
+}
+
+function clearAll() {
+  classes.value = [];
+  resetValues();
 }
 
 </script>
@@ -44,6 +58,7 @@ function addData() {
     <div class="header-container">
       <Input label="Course Name"></Input>
       <Input HTMLType="number" label="Default Semesters"></Input>
+      <button @click="clearAll">Clear All Classes</button>
     </div>
     <div class="inputs-container">
       <Input HTMLType="text" label="Class" v-model="className"/>
